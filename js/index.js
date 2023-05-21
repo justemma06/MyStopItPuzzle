@@ -79,3 +79,6 @@ var app = {
 
 
 };
+
+var AdMob = null;
+app.initialize();
