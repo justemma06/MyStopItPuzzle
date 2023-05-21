@@ -71,5 +71,11 @@ var app = {
         }
     },
 
+    showInterstitial: function() {
+        if(AdMob) {
+            AdMob.showInterstitial();
+        }
+    }
+
 
 };
