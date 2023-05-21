@@ -20,4 +20,8 @@ var app = {
         utils.hideAllByClass('view');
         utils.showElement(viewId);
     },
+
+    hideView: function(viewId) {
+        utils.hideElement(viewId);
+    },
 };
