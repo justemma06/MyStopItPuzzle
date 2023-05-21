@@ -15,4 +15,9 @@ var app = {
         this.music.pause();
         this.music.currentTime = 0;
     },
+
+    showView: function(viewId) {
+        utils.hideAllByClass('view');
+        utils.showElement(viewId);
+    },
 };
