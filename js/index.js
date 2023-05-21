@@ -61,4 +61,15 @@ var app = {
         }
     },
 
+    prepareInterstitial: function() {
+        if(AdMob) {
+            AdMob.prepareInterstitial({
+                adId: this.admobid.interstitial,
+                //isTesting: true, // TODO: remove this line when release
+                autoShow: false
+            });
+        }
+    },
+
+
 };
