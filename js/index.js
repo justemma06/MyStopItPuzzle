@@ -24,4 +24,20 @@ var app = {
     hideView: function(viewId) {
         utils.hideElement(viewId);
     },
+
+    initialize: function() {
+
+        var attachFastClick = Origami.fastclick;
+        attachFastClick(document.body);
+
+        MenuController.init();
+        LevelsController.init();
+        LevelController.init(); 
+        CreditsController.init(); 
+
+        this.playMusic();
+
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
 };
