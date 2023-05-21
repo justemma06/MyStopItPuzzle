@@ -6,4 +6,8 @@ var CreditsController = {
         });
     },
 
+    load: function() {
+        app.showView('credits-view');
+    }
+
 }
