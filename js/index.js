@@ -10,4 +10,9 @@ var app = {
             this.music.play();
         }
     },
+
+    pauseMusic: function() {
+        this.music.pause();
+        this.music.currentTime = 0;
+    },
 };
