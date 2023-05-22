@@ -137,5 +137,23 @@ var LevelController = {
     final_time: null,
     elapsed_time: 0,
 
-    
+    init: function() {
+
+        document.getElementById('level-home').addEventListener('click', function(){
+            app.showView('menu-view');
+        });
+
+        document.getElementById('next-level').addEventListener('click', function(){
+            this.nextLevel();
+        }.bind(this));
+
+        document.getElementById('play-again').addEventListener('click', function(){
+            this.playAgain();
+        }.bind(this));
+
+        document.getElementById('stop-it').addEventListener('click', function(){
+            this.stopIt();
+        }.bind(this));
+
+    },
 };
