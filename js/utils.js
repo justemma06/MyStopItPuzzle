@@ -28,4 +28,11 @@ var utils = {
         }
     },
 
+    findByIdRemoveClass: function(findId, removeClass) {
+        var targetObject = document.getElementById(findId);
+        if (targetObject.classList.contains(removeClass)) {
+            targetObject.classList.remove(removeClass);
+        }
+    },
+
 }
