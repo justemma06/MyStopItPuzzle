@@ -156,4 +156,19 @@ var LevelController = {
         }.bind(this));
 
     },
+
+    load: function(level_id) {
+        this.restartStates();
+        this.hideAlerts();
+
+        this.prepareAds(level_id);
+        app.pauseMusic();
+        app.showView('loading-view');
+        document.getElementById('loading-image').src = 'img/levels/'  + level_id + '.jpg';
+
+        setTimeout(function(){
+            app.playMusic();
+            this.loadLevel(level_id);
+        }.bind(this), 2500);
+    },
 };
