@@ -244,4 +244,11 @@ var LevelController = {
         this.error = false;
         this.stopped = false;
     },
+
+    hideAlerts: function() {
+        utils.hideElement('success-alert');
+        utils.hideElement('new-record');
+        utils.hideElement('gameover-alert');
+        utils.hideElement('play-again-alert');
+    },
 };
