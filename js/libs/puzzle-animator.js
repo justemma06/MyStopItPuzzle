@@ -173,5 +173,18 @@ var puzzleAnimator = {
         return this.currentFrame;
     },
 
+    top: function() {
+        this.paused = true;
+    },
+
+    play: function() {
+        this.paused = false;
+    },
+
+    toggle: function() {
+        this.paused = !this.paused;
+    },
+
+
 
 };
