@@ -228,4 +228,13 @@ var LevelController = {
             lifesContainer.appendChild(img);
         }
     },
+
+    playAgain: function() {
+        this.restartStates();
+        this.hideAlerts();
+
+        this.setupLifes(this.currentLevel);
+        this.start_time = new Date();
+        this.playPuzzle();
+    },
 };
