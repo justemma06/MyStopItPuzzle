@@ -82,4 +82,11 @@ var LevelsController = {
             this.makeLevelsList(levels);
         }.bind(this))
     },
+
+    makeLevelsList: function(levels) {
+        var levelsContainer = document.getElementById('levels-container');
+        levelsContainer.innerHTML = '';
+
+        
+    }
 };
