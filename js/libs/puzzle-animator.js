@@ -185,6 +185,13 @@ var puzzleAnimator = {
         this.paused = !this.paused;
     },
 
+    destroy: function() {
+        if(this.interval) {
+            console.log('Destroy interval');
+            clearInterval(this.interval);
+        };
+    }
+
 
 
 };
