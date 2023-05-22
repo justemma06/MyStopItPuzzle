@@ -291,4 +291,9 @@ var LevelController = {
         this.error = false;
         puzzleAnimator.play();
     },
+
+    stopPuzzle: function() {
+        this.stopped = true;
+        puzzleAnimator.stop();
+    },
 };
