@@ -31,5 +31,27 @@ var Level = {
         return this.max_levels;
     },
 
+    calcPoints: function(currentLevel, elapsed_time, lifes) {
+        var points = 0;
+
+        if(currentLevel.difficulty == 'easy') points = 100000;
+        if(currentLevel.difficulty == 'normal') points = 150000;
+        if(currentLevel.difficulty == 'hard') points = 200000;
+
+        points -= elapsed_time;
+
+        for(var i = 0; i < lifes; i++) { points += 37568; }
+
+        if(points < 10000) points = 10000;
+
+        points += (Math.random() * 1000) + (2000 - (currentLevel.speed * 3));
+        points = Math.floor(points);
+
+        this.saveRecord(currentLevel.id, points);
+
+        return points;
+    },
+
+
 
 };
