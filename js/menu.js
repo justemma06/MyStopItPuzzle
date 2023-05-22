@@ -39,4 +39,9 @@ var MenuController = {
 
     },
 
+    startGame: function() {
+        LevelController.load(1);
+    },
+
+
 };
