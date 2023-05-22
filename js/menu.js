@@ -43,5 +43,10 @@ var MenuController = {
         LevelController.load(1);
     },
 
+    continueGame: function() {
+        var last_level = Level.getLastLevel();
+        LevelController.load(last_level);
+    },
+
 
 };
