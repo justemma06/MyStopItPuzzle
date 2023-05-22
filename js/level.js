@@ -125,5 +125,17 @@ var LevelsController = {
 };
 
 var LevelController = {
+
+    first: true,
+    success: false,
+    gameover: false,
+    error: false,
+    stopped: false,
+    currentLevel: null,
+
+    start_time: null,
+    final_time: null,
+    elapsed_time: 0,
+
     
 };
