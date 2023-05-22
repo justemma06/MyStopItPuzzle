@@ -52,6 +52,12 @@ var Level = {
         return points;
     },
 
+    getRecord: function(level_id) {
+        var record = window.localStorage['level' + level_id + '_record'];
+        if(!record) return 0;
+        return record;
+    },
+
 
 
 };
