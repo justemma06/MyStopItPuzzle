@@ -169,5 +169,9 @@ var puzzleAnimator = {
         return pieces;
     },
 
+    getCurrentFrame: function() {
+        return this.currentFrame;
+    },
+
 
 };
