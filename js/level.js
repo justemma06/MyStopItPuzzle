@@ -269,4 +269,20 @@ var LevelController = {
             utils.showElement('next-level');
         }
     },
+
+    stopIt: function() {
+        if(this.first) {
+            utils.hideElement('first');
+            this.first = false;
+        }
+
+        if(this.success || this.gameover || this.error) return;
+        
+        if(this.stopped){
+          this.playPuzzle();
+        }else{
+          this.stopPuzzle();
+          this.verifySuccess();
+        }
+    }
 };
