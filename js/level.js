@@ -15,5 +15,13 @@ var Level = {
 
     },
 
+    unlockNextLevel: function(actual_id) {
+        var last_level = this.getLastLevel();
+
+        if(actual_id >= last_level ) {
+            window.localStorage['last_level'] = (actual_id < this.max_levels) ? actual_id + 1 : actual_id;
+        }
+    },
+
 
 };
