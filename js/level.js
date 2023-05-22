@@ -58,6 +58,13 @@ var Level = {
         return record;
     },
 
+    saveRecord: function(level_id, points) {
+        var record = this.getRecord(level_id);
+        if(points > record) {
+            window.localStorage['level' + level_id + '_record'] = points;
+        }
+    }
+
 
 
 };
