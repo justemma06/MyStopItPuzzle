@@ -52,5 +52,9 @@ var MenuController = {
         LevelsController.load();
     },
 
+    loadCredits: function() {
+        CreditsController.load();
+    }
+
 
 };
