@@ -99,6 +99,27 @@ var LevelsController = {
             } else {
                 levelDiv.classList.add('inactive')
             };
+
+            levelDiv.addEventListener('click', function(){
+                if(this.level > Level.getLastLevel()) return;
+                LevelController.load(this.level);
+            })
+
+            levelsContainer.appendChild(levelDiv);
+
         });   
+    },
+
+    makeLevelItem: function(level) {
+        var html =
+               '<div class="level-column">' + level.id + 
+               '. <img class="level-img" src="' + 'img/levels/'  + level.id + '.jpg' + '">' +
+               '</div>' +
+               '<div class="level-column level-description">'+
+               '<b>Difficulty:</b> ' + level.difficulty + '<br>' +
+               '<b>Your Score:</b> ' + Level.getRecord(level.id) +
+               '</div>';
+
+        return html;
     }
 };
