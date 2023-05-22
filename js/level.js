@@ -296,4 +296,12 @@ var LevelController = {
         this.stopped = true;
         puzzleAnimator.stop();
     },
+
+    verifySuccess: function() {
+        if(puzzleAnimator.getCurrentFrame() == this.currentLevel.original_frame) {
+          this.gotSuccess();
+        }else{
+          this.decreaseLifes();
+        }
+    },
 };
