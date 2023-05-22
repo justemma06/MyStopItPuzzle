@@ -134,5 +134,9 @@ var puzzleAnimator = {
         }
     },
 
+    clearContext: function() {
+        this.canvasContext.clearRect(0,0,this.puzzleWidth,this.puzzleHeight);
+    },
+
 
 };
