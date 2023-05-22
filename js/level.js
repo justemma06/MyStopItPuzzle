@@ -333,4 +333,21 @@ var LevelController = {
 
     },
 
+    decreaseLifes: function() {
+        if(this.lifes > 1) {
+          this.error = true;
+          utils.showElement('wrong');
+          setTimeout(function(){
+             utils.hideElement('wrong');
+            this.playPuzzle();
+          }.bind(this), 1000);
+
+        }else{
+          this.gameOver();
+        }
+
+        this.lifes--;
+        this.drawLifes();
+    },
+
 };
