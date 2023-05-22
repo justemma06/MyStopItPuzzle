@@ -48,5 +48,9 @@ var MenuController = {
         LevelController.load(last_level);
     },
 
+    selectLevel: function(level) {
+        LevelsController.load();
+    },
+
 
 };
