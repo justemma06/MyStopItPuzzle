@@ -87,6 +87,18 @@ var LevelsController = {
         var levelsContainer = document.getElementById('levels-container');
         levelsContainer.innerHTML = '';
 
-        
+        levels.forEach(function(level) {
+
+            var levelDiv = document.createElement('div');
+            levelDiv.innerHTML = LevelsController.makeLevelItem(level);
+            levelDiv.level = level.id;
+            levelDiv.classList.add('level-item');
+            
+            if(level.id <= Level.getLastLevel()){
+                levelDiv.classList.add('active')
+            } else {
+                levelDiv.classList.add('inactive')
+            };
+        });   
     }
 };
