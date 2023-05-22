@@ -75,4 +75,11 @@ var LevelsController = {
             app.showView('menu-view');
         })
     },
+
+    load: function() {
+        var levels = Level.getAll(function(levels) {
+            app.showView('levels-view');
+            this.makeLevelsList(levels);
+        }.bind(this))
+    },
 };
