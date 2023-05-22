@@ -23,5 +23,9 @@ var Level = {
         }
     },
 
+    getLastLevel: function() {
+        return window.localStorage['last_level'] || 1;
+    },
+
 
 };
