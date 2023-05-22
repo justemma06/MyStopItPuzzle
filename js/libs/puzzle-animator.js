@@ -154,5 +154,9 @@ var puzzleAnimator = {
         }.bind(this), this.options.speed);
     },
 
+    originalPuzzle: function() {
+        this.drawPieces(this.originalPieces);
+    },
+
 
 };
