@@ -35,4 +35,11 @@ var utils = {
         }
     },
 
+    findByIdAddClass: function(findId, addClass) {
+        var targetObject = document.getElementById(findId);
+        if (!targetObject.classList.contains(addClass)) {
+            targetObject.classList.add(addClass);
+        }
+    }
+
 }
