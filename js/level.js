@@ -123,3 +123,7 @@ var LevelsController = {
         return html;
     }
 };
+
+var LevelController = {
+    
+};
