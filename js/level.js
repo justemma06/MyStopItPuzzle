@@ -350,4 +350,10 @@ var LevelController = {
         this.drawLifes();
     },
 
+    gameOver: function() {
+        this.gameover = true;
+        utils.showElement('gameover-alert');
+        utils.showElement('play-again-alert');
+    }
+
 };
