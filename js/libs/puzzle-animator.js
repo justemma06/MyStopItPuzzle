@@ -163,5 +163,11 @@ var puzzleAnimator = {
         this.drawPieces(this.pieces);
     },
 
+    shuffleArray: function(pieces){
+        for(var random, copy, quantity = pieces.length; quantity; random = parseInt(Math.random() * quantity), 
+            copy = pieces[--quantity], pieces[quantity] = pieces[random], pieces[random] = copy);
+        return pieces;
+    },
+
 
 };
