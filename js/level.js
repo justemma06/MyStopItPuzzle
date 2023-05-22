@@ -284,5 +284,11 @@ var LevelController = {
           this.stopPuzzle();
           this.verifySuccess();
         }
-    }
+    },
+
+    playPuzzle: function() {
+        this.stopped = false;
+        this.error = false;
+        puzzleAnimator.play();
+    },
 };
