@@ -77,4 +77,10 @@ var puzzleAnimator = {
         
     },
 
+    initPuzzle: function() {
+        this.canvasContext.drawImage(this.img, 0, 0, this.puzzleWidth, this.puzzleHeight, 0, 0, 
+                                     this.puzzleWidth, this.puzzleHeight);
+        this.buildPuzzlePieces();
+    },
+
 };
