@@ -179,4 +179,17 @@ var LevelController = {
     showAds: function(level_id) {
         if((level_id % 3) == 0) app.showInterstitial();
     },
+
+    loadLevel: function(level_id) {
+        Level.get(level_id, function(level) {
+            this.currentLevel = level;
+            this.setupAnimator(level);
+            this.setupLifes(level);
+            this.start_time = new Date();
+
+            this.isLastLevel(level_id);
+            app.showView('level-view');
+
+        }.bind(this));
+    },
 };
