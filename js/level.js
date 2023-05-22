@@ -251,4 +251,12 @@ var LevelController = {
         utils.hideElement('gameover-alert');
         utils.hideElement('play-again-alert');
     },
+
+    nextLevel: function() {
+        this.showAds(this.currentLevel.id);
+        var nextLevel = this.currentLevel.id + 1;
+        this.restartStates();
+        this.load(nextLevel);
+        this.isLastLevel(nextLevel);
+    },
 };
