@@ -192,4 +192,15 @@ var LevelController = {
 
         }.bind(this));
     },
+
+    setupAnimator: function(level) {
+        puzzleAnimator.init({
+            img: 'img/levels/'  + level.id + '.jpg',
+            canvasId: 'canvas',
+            difficulty: level.pieces,
+            originalImageFrame: level.original_frame,
+            maxFrames: level.max_frames,
+            speed: level.speed
+        });
+    },
 };
