@@ -70,5 +70,9 @@ var Level = {
 };
 
 var LevelsController = {
-    
+    init: function() {
+        document.getElementById('levels-home').addEventListener('click', function(){
+            app.showView('menu-view');
+        })
+    },
 };
