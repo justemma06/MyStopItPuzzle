@@ -304,4 +304,22 @@ var LevelController = {
           this.decreaseLifes();
         }
     },
+
+    gotSuccess: function() {
+        this.success = true;
+        this.final_time = new Date;
+
+        // Elapsed Miliseconds
+        this.elapsed_time = this.final_time - this.start_time;
+        this.elapsed_time_show = this.elapsed_time / 1000;
+        
+        Level.unlockNextLevel(this.currentLevel.id);
+        this.points = Level.calcPoints(this.currentLevel, this.elapsed_time, this.lifes);
+        this.record = Level.getRecord(this.currentLevel.id);
+
+        this.writeSuccessInformation();
+
+        utils.showElement('success-alert');
+        utils.showElement('play-again-alert');
+    },
 };
