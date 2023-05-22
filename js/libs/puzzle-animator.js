@@ -66,4 +66,15 @@ var puzzleAnimator = {
         this.initPuzzle();
     },
 
+    makeCanvas: function() {
+
+        if(!this.canvas) this.canvas = document.getElementById(this.options.canvasId);
+        if(!this.canvasContext) this.canvasContext = this.canvas.getContext('2d');
+
+        this.clearContext();
+        this.canvas.width = this.puzzleWidth;
+        this.canvas.height = this.puzzleHeight;
+        
+    },
+
 };
