@@ -322,4 +322,15 @@ var LevelController = {
         utils.showElement('success-alert');
         utils.showElement('play-again-alert');
     },
+
+    writeSuccessInformation: function() {
+        document.getElementById('points').innerHTML = this.points;
+        document.getElementById('record').innerHTML = this.record;
+        document.getElementById('elapsed-time').innerHTML = this.elapsed_time_show.toFixed(2);
+        document.getElementById('lifes').innerHTML = this.lifes;
+
+        if(this.points >= this.record) utils.showElement('new-record');
+
+    },
+
 };
