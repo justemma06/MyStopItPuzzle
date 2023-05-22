@@ -109,4 +109,30 @@ var puzzleAnimator = {
         this.setupAnimation();
     },
 
+    drawPieces: function(pieces) {
+        var i,
+            piece,
+            xPos = 0,
+            yPos = 0;
+
+        this.clearContext();
+
+        for(i = 0;i < pieces.length; i++){
+            piece = pieces[i];
+            piece.xPos = xPos;
+            piece.yPos = yPos;
+
+            this.canvasContext.drawImage(this.img, piece.sx, piece.sy, this.pieceWidth, this.pieceHeight, 
+                                          xPos, yPos, this.pieceWidth, this.pieceHeight);
+            this.canvasContext.strokeRect(xPos, yPos, this.pieceWidth, this.pieceHeight);
+
+            xPos += this.pieceWidth;
+            if(xPos >= this.puzzleWidth){
+                xPos = 0;
+                yPos += this.pieceHeight;
+            }
+        }
+    },
+
+
 };
