@@ -158,5 +158,10 @@ var puzzleAnimator = {
         this.drawPieces(this.originalPieces);
     },
 
+    shufflePuzzle: function() {
+        this.pieces = this.shuffleArray(this.pieces);
+        this.drawPieces(this.pieces);
+    },
+
 
 };
