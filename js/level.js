@@ -175,4 +175,8 @@ var LevelController = {
     prepareAds: function(level_id) {
         if((level_id % 3) == 0) app.prepareInterstitial();
     },
+
+    showAds: function(level_id) {
+        if((level_id % 3) == 0) app.showInterstitial();
+    },
 };
