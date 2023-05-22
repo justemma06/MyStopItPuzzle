@@ -203,4 +203,18 @@ var LevelController = {
             speed: level.speed
         });
     },
+
+    setupLifes: function(level) {
+        if(level.difficulty == 'easy') {
+          this.lifes = 3;
+        }else
+        if(level.difficulty == 'normal'){
+          this.lifes = 4;
+        }else{
+          this.lifes = 5;
+        }
+
+        this.drawLifes();
+        max_lifes = this.lifes;
+    },
 };
