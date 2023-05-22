@@ -259,4 +259,14 @@ var LevelController = {
         this.load(nextLevel);
         this.isLastLevel(nextLevel);
     },
+
+    isLastLevel: function(level_id) {
+        if(level_id == Level.getMaxLevel()) {
+            utils.showElement('win-game');
+            utils.hideElement('next-level');
+        }else{
+            utils.hideElement('win-game');
+            utils.showElement('next-level');
+        }
+    },
 };
