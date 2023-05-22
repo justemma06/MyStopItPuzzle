@@ -34,5 +34,42 @@
                 <img class="loading-image" id="loading-image" src="">
             </div>
         </div>
+
+        <div class="view level bounceIn" id="level-view">
+            <div class="view-header">
+                <button class="simple" id="level-home">Home</button>
+                <div id="lifes-container"></div>
+            </div>
+            <div class="wrong" id="wrong">
+                FAIL
+            </div>
+            <div class="first" id="first"><div class="first-text">Click/Touch to stop the Puzzle</div></div>
+            <div class="alert bounceIn" id="success-alert">
+                <h3>CONGRATULATIONS!!!</h3>
+                <h4 id="new-record">You hit a new record</h4>
+                <p>
+                    <b>Points:</b> <span id="points"></span><br>
+                    <b>Your Record:</b> <span id="record"></span><br>
+                    <b>Elapsed Time:</b> <span id="elapsed-time"></span> secs<br>
+                    <b>Ramaining Lifes:</b> <span id="lifes"></span>
+                </p>
+                <p id="win-game">
+                    <b>Fantastic!!! You Win this game!!!! Now, you can try hit new scores!! </b>
+                </p>
+                <button id="next-level">Next Level</button>
+            </div>
+
+            <div class="alert bounceIn" id="gameover-alert">
+                <h3>GAME OVER!!!</h3>
+            </div>
+            <div class="alert bounceIn" id="play-again-alert">
+                <button id="play-again">Play Again</button>
+            </div>
+
+            <div id="img-container">
+                <a id="stop-it"><canvas id="canvas"></canvas></a>
+            </div>
+
+        </div>
     </body>
 </html>   
