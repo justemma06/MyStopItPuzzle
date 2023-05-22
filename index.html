@@ -9,6 +9,7 @@
         <title>StopIt - Image Animated Puzzle</title>
     </head>
     <body>
+        
         <div class="view menu bounceIn" id="menu-view">
             <div class="view-header">
                 <button class="simple right small" id="toggle-sound">Sounds: ON</button>
@@ -27,7 +28,7 @@
             <div id="levels-container">
             </div>
         </div>
-
+        
         <div class="view loading bounceIn" id="loading-view">
             <div class="center">
                 <span class="loading-text">Loading the Puzzle...</span>
@@ -89,5 +90,20 @@
                 http://creativecommons.org/licenses/by/3.0/<br>
             </div>
         </div>
+
+        <audio id="music" loop>
+          <source src="music/doo1.mp3" type="audio/mpeg">
+        </audio>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
+        <script type="text/javascript" src="js/libs/puzzle-animator.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/sound.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/credits.js"></script>
+        <script type="text/javascript" src="js/levels.js"></script>
+        <script type="text/javascript" src="js/level.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
-</html>   
+</html>
