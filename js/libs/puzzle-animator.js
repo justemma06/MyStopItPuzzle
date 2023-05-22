@@ -138,5 +138,21 @@ var puzzleAnimator = {
         this.canvasContext.clearRect(0,0,this.puzzleWidth,this.puzzleHeight);
     },
 
+    setupAnimation: function() {
+        this.interval = setInterval(function(){
+            if(!this.paused) {
+
+                this.currentFrame = (this.currentFrame < this.maxFrames) ? this.currentFrame + 1 : 1;
+
+                if(this.currentFrame != this.originalImageFrame){
+                    this.shufflePuzzle();
+                }else{
+                    this.originalPuzzle();
+                }
+            }
+
+        }.bind(this), this.options.speed);
+    },
+
 
 };
