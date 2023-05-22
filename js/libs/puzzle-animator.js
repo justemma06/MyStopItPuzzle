@@ -46,4 +46,14 @@ var puzzleAnimator = {
 
     },
 
+    loadImage: function(image_path) {
+
+        if(this.img) this.img.remove();
+
+        this.img = new Image();
+        this.img.addEventListener('load',this.imageLoaded.bind(this),false);
+        this.img.src = this.options.img || image_path;
+
+    },
+
 };
