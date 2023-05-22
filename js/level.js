@@ -27,5 +27,9 @@ var Level = {
         return window.localStorage['last_level'] || 1;
     },
 
+    getMaxLevel: function() {
+        return this.max_levels;
+    },
+
 
 };
