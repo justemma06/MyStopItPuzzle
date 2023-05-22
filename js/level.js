@@ -237,4 +237,11 @@ var LevelController = {
         this.start_time = new Date();
         this.playPuzzle();
     },
+
+    restartStates: function() {
+        this.success = false;
+        this.gameover = false;
+        this.error = false;
+        this.stopped = false;
+    },
 };
