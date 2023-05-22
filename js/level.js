@@ -171,4 +171,8 @@ var LevelController = {
             this.loadLevel(level_id);
         }.bind(this), 2500);
     },
+
+    prepareAds: function(level_id) {
+        if((level_id % 3) == 0) app.prepareInterstitial();
+    },
 };
