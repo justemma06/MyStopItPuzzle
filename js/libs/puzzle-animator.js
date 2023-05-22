@@ -83,4 +83,30 @@ var puzzleAnimator = {
         this.buildPuzzlePieces();
     },
 
+    buildPuzzlePieces: function() {
+        var piecesQuantity,
+            piece,
+            xPos = 0,
+            yPos = 0;
+
+        for(piecesQuantity = 0; piecesQuantity < this.options.difficulty * this.options.difficulty; piecesQuantity++){
+            piece = {};
+            piece.sx = xPos;
+            piece.sy = yPos;
+            
+            this.originalPieces.push(piece);
+
+            xPos += this.pieceWidth;
+            if(xPos >= this.puzzleWidth){
+                xPos = 0;
+                yPos += this.pieceHeight;
+            }
+        }
+
+        // Copy the pieces to another array, because the animation can shuffle the pieces array
+        this.pieces = this.originalPieces.slice(0);
+
+        this.setupAnimation();
+    },
+
 };
