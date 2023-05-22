@@ -17,4 +17,15 @@ var utils = {
         }
     },
 
+    findByClassRemoveClass: function(findClass, removeClass, exceptId) {
+        var objects = document.getElementsByClassName(findClass);
+        var i;
+        for (i = 0; i < objects.length; i++) {
+          var targetObject = objects[i];
+          if (targetObject.classList.contains(removeClass) && targetObject.id != exceptId) {
+            targetObject.classList.remove(removeClass);
+          }
+        }
+    },
+
 }
