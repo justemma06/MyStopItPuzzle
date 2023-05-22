@@ -56,4 +56,14 @@ var puzzleAnimator = {
 
     },
 
+    imageLoaded: function() {
+        this.pieceWidth = Math.floor(this.img.width / this.options.difficulty)
+        this.pieceHeight = Math.floor(this.img.height / this.options.difficulty)
+        this.puzzleWidth = this.pieceWidth * this.options.difficulty;
+        this.puzzleHeight = this.pieceHeight * this.options.difficulty;
+
+        this.makeCanvas();
+        this.initPuzzle();
+    },
+
 };
