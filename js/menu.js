@@ -27,4 +27,16 @@ var MenuController = {
         }.bind(this));
     },
 
+    setSoundButton: function() {
+        var isActive = Sound.isSoundActive();
+        document.getElementById('toggle-sound').innerHTML = (isActive) ? 'Sound: ON' : 'Sound: OFF';
+
+        if(isActive) {
+            app.playMusic();
+        }else{
+            app.pauseMusic();
+        }
+
+    },
+
 };
