@@ -32,5 +32,18 @@ var puzzleAnimator = {
         this.loadImage();
 
     },
-    
+
+    clearAnimationData: function() {
+
+        if(this.interval) clearInterval(this.interval);
+        if(this.pieces) this.pieces = [];
+        if(this.originalPieces) this.originalPieces = [];
+
+        this.pieceWidth = 0;
+        this.pieceHeight =  0;
+        this.puzzleWidth = 0;
+        this.puzzleHeight = 0;
+
+    },
+
 };
