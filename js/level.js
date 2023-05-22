@@ -217,4 +217,15 @@ var LevelController = {
         this.drawLifes();
         max_lifes = this.lifes;
     },
+
+    drawLifes: function() {
+        var lifesContainer = document.getElementById('lifes-container');
+        lifesContainer.innerHTML = '';
+
+        for(var i = 0; i < this.lifes; i++) {
+            var img = document.createElement('img');
+            img.src = 'img/heart.png';
+            lifesContainer.appendChild(img);
+        }
+    },
 };
