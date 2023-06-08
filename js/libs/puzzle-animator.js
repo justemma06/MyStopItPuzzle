@@ -1,4 +1,4 @@
-var puzzleAnimator = {
+const puzzleAnimator = {
 
     img: null,
     canvas: null,
@@ -84,7 +84,7 @@ var puzzleAnimator = {
     },
 
     buildPuzzlePieces: function() {
-        var piecesQuantity,
+        let piecesQuantity,
             piece,
             xPos = 0,
             yPos = 0;
@@ -110,7 +110,7 @@ var puzzleAnimator = {
     },
 
     drawPieces: function(pieces) {
-        var i,
+        let i,
             piece,
             xPos = 0,
             yPos = 0;
@@ -164,7 +164,7 @@ var puzzleAnimator = {
     },
 
     shuffleArray: function(pieces){
-        for(var random, copy, quantity = pieces.length; quantity; random = parseInt(Math.random() * quantity), 
+        for(let random, copy, quantity = pieces.length; quantity; random = parseInt(Math.random() * quantity), 
             copy = pieces[--quantity], pieces[quantity] = pieces[random], pieces[random] = copy);
         return pieces;
     },
@@ -173,7 +173,7 @@ var puzzleAnimator = {
         return this.currentFrame;
     },
 
-    top: function() {
+    stop: function() {
         this.paused = true;
     },
 
@@ -191,7 +191,5 @@ var puzzleAnimator = {
             clearInterval(this.interval);
         };
     }
-
-
 
 };

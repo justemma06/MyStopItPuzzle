@@ -1,4 +1,4 @@
-var MenuController = {
+const MenuController = {
 
     init: function() {
 
@@ -28,7 +28,7 @@ var MenuController = {
     },
 
     setSoundButton: function() {
-        var isActive = Sound.isSoundActive();
+        let isActive = Sound.isSoundActive();
         document.getElementById('toggle-sound').innerHTML = (isActive) ? 'Sound: ON' : 'Sound: OFF';
 
         if(isActive) {
@@ -44,7 +44,7 @@ var MenuController = {
     },
 
     continueGame: function() {
-        var last_level = Level.getLastLevel();
+        let last_level = Level.getLastLevel();
         LevelController.load(last_level);
     },
 
@@ -56,5 +56,4 @@ var MenuController = {
         CreditsController.load();
     }
 
-
-};
+}

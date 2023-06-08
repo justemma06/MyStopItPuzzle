@@ -1,3 +1,6 @@
+/** Shrinkwrap URL:
+ *      /v2/bundles/js?modules=fastclick%401.0.6%2Co-autoinit%401.2.1&shrinkwrap=
+ */
 ! function (t) {
 	function e(o) {
 		if (n[o]) return n[o].exports;

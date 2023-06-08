@@ -1,4 +1,4 @@
-var CreditsController = {
+const CreditsController = {
 
     init: function() {
         document.getElementById('credits-home').addEventListener('click', function(){

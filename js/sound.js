@@ -1,6 +1,7 @@
-var Sound = {
+const Sound = {
+
     toggleSound: function() {
-        var actualSound = this.isSoundActive();
+        let actualSound = this.isSoundActive();
         window.localStorage['sound'] = !actualSound;
     },
 
@@ -8,4 +9,5 @@ var Sound = {
         if(localStorage.getItem("sound") === null) return true;
         return JSON.parse(window.localStorage['sound']);
     }
+
 }

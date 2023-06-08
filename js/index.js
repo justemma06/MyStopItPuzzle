@@ -1,11 +1,11 @@
 
-var app = {
+const app = {
     
     admobid: {},
     music: document.getElementById("music"),
-
+    
     playMusic: function() {
-        var isActive = Sound.isSoundActive();
+        let isActive = Sound.isSoundActive();
         if(isActive) {
             this.music.play();
         }
@@ -20,14 +20,12 @@ var app = {
         utils.hideAllByClass('view');
         utils.showElement(viewId);
     },
-
     hideView: function(viewId) {
         utils.hideElement(viewId);
     },
-
     initialize: function() {
 
-        var attachFastClick = Origami.fastclick;
+        let attachFastClick = Origami.fastclick;
         attachFastClick(document.body);
 
         MenuController.init();
@@ -76,9 +74,7 @@ var app = {
             AdMob.showInterstitial();
         }
     }
-
-
 };
 
-var AdMob = null;
+const AdMob = null;
 app.initialize();

@@ -1,4 +1,4 @@
-var utils = {
+const utils = {
 
     showElement: function(elementId) {
         document.getElementById(elementId).style.display = 'block';
@@ -9,19 +9,19 @@ var utils = {
     },
 
     hideAllByClass: function(findClass) {
-        var objects = document.getElementsByClassName(findClass);
-        var i;
+        const objects = document.getElementsByClassName(findClass);
+        let i;
         for (i = 0; i < objects.length; i++) {
-          var targetObject = objects[i];
+          let targetObject = objects[i];
           targetObject.style.display = 'none';
         }
     },
 
     findByClassRemoveClass: function(findClass, removeClass, exceptId) {
-        var objects = document.getElementsByClassName(findClass);
-        var i;
+        let objects = document.getElementsByClassName(findClass);
+        let i;
         for (i = 0; i < objects.length; i++) {
-          var targetObject = objects[i];
+          let targetObject = objects[i];
           if (targetObject.classList.contains(removeClass) && targetObject.id != exceptId) {
             targetObject.classList.remove(removeClass);
           }
@@ -29,14 +29,14 @@ var utils = {
     },
 
     findByIdRemoveClass: function(findId, removeClass) {
-        var targetObject = document.getElementById(findId);
+        let targetObject = document.getElementById(findId);
         if (targetObject.classList.contains(removeClass)) {
             targetObject.classList.remove(removeClass);
         }
     },
 
     findByIdAddClass: function(findId, addClass) {
-        var targetObject = document.getElementById(findId);
+        let targetObject = document.getElementById(findId);
         if (!targetObject.classList.contains(addClass)) {
             targetObject.classList.add(addClass);
         }

@@ -1,4 +1,4 @@
-var levels = [
+const levels = [
     {
         "id": 1,
         "difficulty": "easy",
